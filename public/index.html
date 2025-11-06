@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Cafe - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">Sunny Cafe</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-primary">Home</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-primary">About</a>
+                    <a href="/menu.html" class="text-gray-700 hover:text-primary">Menu</a>
+                    <a href="/contact.html" class="text-gray-700 hover:text-primary">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="/" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="/about.html" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="/menu.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Menu</a>
+                <a href="/contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Welcome to Sunny Cafe</h2>
+            <p class="text-xl text-gray-600 mb-8">Enjoy the warmth of the sun with our fresh brews and delightful treats.</p>
+            <a href="/menu.html" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition">View Menu</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl mb-4">☕</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Premium Coffee</h3>
+                    <p class="text-gray-600">Sourced from the best beans around the world.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🍰</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Fresh Pastries</h3>
+                    <p class="text-gray-600">Baked daily with love and care.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🌞</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sunny Atmosphere</h3>
+                    <p class="text-gray-600">Relax in our cozy, sunlit space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
