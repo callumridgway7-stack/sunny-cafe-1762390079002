@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Sunny Cafe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">Sunny Cafe</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-primary">Home</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-primary">About</a>
+                    <a href="/menu.html" class="text-gray-700 hover:text-primary">Menu</a>
+                    <a href="/contact.html" class="text-gray-700 hover:text-primary">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="/" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="/about.html" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="/menu.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Menu</a>
+                <a href="/contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="pt-20 pb-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-8">About Sunny Cafe</h2>
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <p class="text-xl mb-6">Sunny Cafe was founded in 2010 with a simple vision: to bring the warmth of the sun into every cup of coffee and every bite of pastry. Nestled in the heart of the city, our cafe has become a beloved spot for locals and visitors alike.</p>
+                <p class="mb-6">We pride ourselves on using only the finest ingredients, sourced sustainably. Our baristas are passionate about crafting the perfect brew, and our bakers create fresh delights every morning.</p>
+                <p>Come visit us and experience the sunny side of life!</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
